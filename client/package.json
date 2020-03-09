@@ -1,0 +1,21 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:tailwind": "postcss ./static/css/master.css -o ./static/dist/tailwind.css",
+    "watch": "watch \"npm run build:tailwind\" ./templates" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.1.4"
+  },
+  "dependencies": {
+    "watch": "^1.0.2"
+  }
+}
