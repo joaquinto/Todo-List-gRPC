@@ -19,7 +19,7 @@ func main() {
 	}
 	client := model.NewTodoServiceClient(conn)
 	sc := handler.Client{ServiceClient: client}
-	defer fmt.Println("Server started on port 8080")
+	fmt.Println("Server started on port 8080")
 	router := mux.NewRouter()
 	router.HandleFunc("/create-todo", sc.CreateTodoHandler).Methods(http.MethodPost)
 	router.HandleFunc("/todos", sc.GetTodosHandler).Methods(http.MethodGet)
